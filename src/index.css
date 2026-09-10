@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #030208;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Cosmic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030208;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #271447;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a1d7c;
+}
+
+/* Glassmorphism utility with space gradient borders */
+.cosmic-panel {
+  background: rgba(10, 7, 29, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(3, 2, 8, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.cosmic-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cosmic-panel-hover:hover {
+  border-color: rgba(217, 70, 239, 0.45);
+  box-shadow: 0 12px 40px 0 rgba(147, 51, 234, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Cosmic glow gradient text */
+.text-cosmic-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f0abfc 45%, #ec4899 75%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-subtle-glow {
+  background: linear-gradient(135deg, #ffffff 30%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-orange-glow {
+  background: linear-gradient(135deg, #fde047 0%, #fb923c 60%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle laser borders & indicators */
+.laser-line {
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5), transparent);
+}
+
+.telemetry-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
