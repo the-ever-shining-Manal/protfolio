@@ -3,7 +3,7 @@ import { Quote, Sparkles } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-24 sm:py-32 overflow-hidden border-t border-purple-500/15">
+    <section id="about" className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background celestial glow */}
       <div 
         className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full filter blur-[140px] opacity-15 pointer-events-none"
@@ -52,10 +52,6 @@ export const AboutSection: React.FC = () => {
 
               <p>
                 Today, I’m still driven by the same curiosity: understanding how things work, imagining what could be better, and building technology that makes people’s lives easier.
-              </p>
-
-              <p className="text-slate-300 pt-2 border-t border-white/5">
-                I’m an AI Engineering student interested in machine learning, deep learning, NLP, Generative AI, RAG, and agentic systems. I enjoy breaking down complex problems, listening to people, organizing ideas into clear roadmaps, and turning concepts into working systems. I’m also a team player and leader who believes that good solutions come from combining different perspectives.
               </p>
             </div>
 

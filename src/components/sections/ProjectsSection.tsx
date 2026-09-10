@@ -21,7 +21,7 @@ export const ProjectsSection: React.FC = () => {
     : PROJECTS.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="relative py-24 sm:py-32 overflow-hidden border-t border-purple-500/15">
+    <section id="projects" className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background celestial glow */}
       <div 
         className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full filter blur-[140px] opacity-15 pointer-events-none"
@@ -36,14 +36,11 @@ export const ProjectsSection: React.FC = () => {
         
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight">
             Things I’ve{' '}
             <span className="text-cosmic-gradient">Built.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
-            From ideas that once belonged in science fiction to systems I can build today.
-          </p>
         </div>
 
         {/* Category Filters */}

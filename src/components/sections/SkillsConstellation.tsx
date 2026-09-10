@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ConstellationCanvas } from '../canvas/ConstellationCanvas';
 import { HeroSphere } from '../canvas/HeroSphere';
-import { Brain, Sparkles, Database, Bot, Eye, Layers } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 const CATEGORIES = [
@@ -13,56 +12,11 @@ const CATEGORIES = [
   'Engineering & Workflow'
 ];
 
-const TOP_SKILL_MODULES = [
-  {
-    id: "ml",
-    icon: Brain,
-    title: "Machine Learning & Neural Nets",
-    color: "#f97316",
-    summary: "Supervised/unsupervised algorithms, feature engineering, Scikit-learn, XGBoost, TensorFlow, and deep learning architectures."
-  },
-  {
-    id: "genai",
-    icon: Sparkles,
-    title: "Generative AI & Multimodal LLMs",
-    color: "#ec4899",
-    summary: "Prompt engineering, GPT-4o-mini vision ingestion, synthetic dataset creation, and multimodal vision-language systems."
-  },
-  {
-    id: "rag",
-    icon: Database,
-    title: "RAG & Vector Retrieval",
-    color: "#d946ef",
-    summary: "Hybrid dense/sparse search (BGE-M3 + BM25), FAISS indexing, hallucination control boundaries, and Arabic NLP."
-  },
-  {
-    id: "agentic",
-    icon: Bot,
-    title: "Agentic AI & Multi-Agent Systems",
-    color: "#a855f7",
-    summary: "Cognitive memory architectures, autonomous multi-agent tool calling, decision workflows, and n8n orchestration."
-  },
-  {
-    id: "cv",
-    icon: Eye,
-    title: "Computer Vision & Audio Discovery",
-    color: "#06b6d4",
-    summary: "Medical image symptom triage, acoustic feature extraction, harmonic clustering, and audio pattern discovery."
-  },
-  {
-    id: "cloud",
-    icon: Layers,
-    title: "Production Engineering & Cloud",
-    color: "#10b981",
-    summary: "FastAPI asynchronous microservices, Docker containerization, AWS, Google Cloud Vertex AI, and SQL schema normalization."
-  }
-];
-
 export const SkillsConstellation: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
-    <section id="skills" className="relative py-20 sm:py-28 overflow-hidden border-t border-purple-500/15">
+    <section id="skills" className="relative py-20 sm:py-28 overflow-hidden">
       {/* Ambient background flares */}
       <div 
         className="absolute top-1/4 left-1/4 w-[550px] h-[550px] rounded-full filter blur-[140px] opacity-15 pointer-events-none"
@@ -76,59 +30,20 @@ export const SkillsConstellation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* =========================================================================
-            PART 1: THE CELESTIAL AI PLANET & TOP SKILLS SHOWCASE
+            PART 1: THE CELESTIAL AI PLANET SHOWCASE
            ========================================================================= */}
-        <div className="mb-20">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight mb-4">
+        <div className="mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight">
               Top Skills &{' '}
               <span className="text-cosmic-gradient">AI Core Modules.</span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
-              The primary architectural modules powering my intelligent systems — from neural architectures to autonomous multi-agent pipelines.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-6xl mx-auto">
+          <div className="flex items-center justify-center max-w-xl mx-auto">
             {/* The Rotating Celestial Planet / AI Core Sphere */}
-            <div className="lg:col-span-5 flex items-center justify-center">
-              <div className="w-full max-w-[420px]">
-                <HeroSphere />
-              </div>
-            </div>
-
-            {/* Top Skills Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {TOP_SKILL_MODULES.map((mod, idx) => {
-                const Icon = mod.icon;
-                return (
-                  <div
-                    key={mod.id}
-                    className="cosmic-panel rounded-2xl p-5 border-white/10 hover:border-pink-500/40 transition-all duration-300 group hover:-translate-y-0.5 shadow-sm"
-                    onMouseEnter={() => cosmicAudio.playChirp(680 + idx * 45, 0.03)}
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div 
-                        className="w-9 h-9 rounded-xl flex items-center justify-center border transition-all duration-300 group-hover:scale-110 shrink-0"
-                        style={{
-                          backgroundColor: `${mod.color}15`,
-                          borderColor: `${mod.color}40`,
-                          color: mod.color
-                        }}
-                      >
-                        <Icon className="w-4 h-4" />
-                      </div>
-                      <h3 className="text-base font-bold font-display text-white group-hover:text-pink-200 transition-colors">
-                        {mod.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed">
-                      {mod.summary}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="w-full max-w-[460px]">
+              <HeroSphere />
             </div>
           </div>
         </div>
@@ -136,14 +51,11 @@ export const SkillsConstellation: React.FC = () => {
         {/* =========================================================================
             PART 2: INTERACTIVE AI CONSTELLATION MAP
            ========================================================================= */}
-        <div className="pt-12 border-t border-purple-500/20">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h3 className="text-3xl sm:text-4xl font-extrabold font-display text-white tracking-tight mb-3">
+        <div className="pt-12">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <h3 className="text-3xl sm:text-4xl font-extrabold font-display text-white tracking-tight">
               Skill <span className="text-cosmic-gradient">Constellation.</span>
             </h3>
-            <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
-              Hover over any star node to reveal its technical dossier and connected skills. Click to lock node telemetry.
-            </p>
           </div>
 
           {/* Category Sector Filter Pills */}

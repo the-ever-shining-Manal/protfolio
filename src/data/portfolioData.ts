@@ -383,11 +383,10 @@ export const MISSIONS: MissionExperience[] = [
     location: "Egypt",
     summary: "Engineering next-generation agentic workflows, memory systems, and resilient LLM integrations.",
     bulletPoints: [
-      "Learning and applying state-of-the-art LLMs, prompt engineering, API integration, and open-source AI technologies.",
-      "Building cutting-edge AI applications integrating Retrieval-Augmented Generation (RAG), long-term cognitive memory systems, and multi-agent orchestration.",
-      "Developing and deploying end-to-end AI solutions while exploring ethical AI practices, hallucination containment, and modern production AI workflows."
+      "Building autonomous multi-agent workflows with cognitive memory, RAG, and custom tool calling.",
+      "Developing production AI solutions with strict hallucination controls and ethical guardrails."
     ],
-    technologies: ["Agentic AI", "Multi-Agent Systems", "RAG", "LLMs", "Memory Systems", "Prompt Engineering"],
+    technologies: ["Agentic AI", "Multi-Agent Systems", "RAG", "LLMs", "Memory Systems"],
     status: "CURRENT MISSION",
     badgeColor: "border-cosmic-pink text-pink-400 bg-pink-500/10"
   },
@@ -395,15 +394,14 @@ export const MISSIONS: MissionExperience[] = [
     missionNumber: "MISSION 02",
     role: "AI & Machine Learning Trainee",
     organization: "ROUTE Academy",
-    period: "Jul 2025 – Dec 2025",
+    period: "Jul 2025 – Jan 2026 (7 Months)",
     location: "Egypt",
-    summary: "Completed an intensive 6-month AI & ML diploma mastering modern supervised and unsupervised predictive pipelines.",
+    summary: "Intensive 7-month AI & ML diploma mastering supervised, unsupervised, and deep predictive pipelines.",
     bulletPoints: [
-      "Graduated from an intensive 6-month AI & ML diploma focused on supervised and unsupervised learning, rigorous model evaluation, and production ML workflows.",
-      "Engineered, optimized, and validated robust models across regression, classification, clustering, and deep neural network architectures.",
-      "Analyzed multidimensional datasets to derive actionable predictive insights and built end-to-end training and inference scripts."
+      "Engineered, optimized, and benchmarked robust regression, classification, and neural network models.",
+      "Built end-to-end data preprocessing, feature engineering, and production inference pipelines."
     ],
-    technologies: ["Machine Learning", "Neural Networks", "Classification", "Regression", "Clustering", "Python"],
+    technologies: ["Machine Learning", "Neural Networks", "Scikit-learn", "Python", "Deep Learning"],
     status: "COMPLETED ORBIT",
     badgeColor: "border-purple-500/40 text-purple-300 bg-purple-500/10"
   },
@@ -413,13 +411,12 @@ export const MISSIONS: MissionExperience[] = [
     organization: "National Telecommunication Institute (NTI)",
     period: "Jul 2025 – Aug 2025",
     location: "Egypt",
-    summary: "120-hour intensive ML practicum focused on enterprise data pipelines, feature engineering, and Scikit-learn pipelines.",
+    summary: "120-hour intensive ML practicum focused on enterprise data pipelines and Scikit-learn architectures.",
     bulletPoints: [
-      "Completed a rigorous 120-hour internship dedicated to supervised and unsupervised machine learning fundamentals.",
-      "Handled complex data preprocessing, advanced feature engineering, outlier detection, and multidimensional imputation.",
-      "Constructed reusable Scikit-learn preprocessing and modeling pipelines, conducting extensive performance benchmarking across diverse algorithms."
+      "Constructed modular Scikit-learn preprocessing and modeling pipelines with cross-validation.",
+      "Performed advanced feature engineering, outlier purification, and performance benchmarking."
     ],
-    technologies: ["Scikit-learn", "Feature Engineering", "Data Preprocessing", "Benchmarking", "Supervised ML"],
+    technologies: ["Scikit-learn", "Feature Engineering", "Data Preprocessing", "Supervised ML"],
     status: "COMPLETED ORBIT",
     badgeColor: "border-cosmic-orange/40 text-orange-300 bg-orange-500/10"
   },
@@ -429,13 +426,12 @@ export const MISSIONS: MissionExperience[] = [
     organization: "DreamSoft",
     period: "Aug 2024 – Sep 2024",
     location: "Egypt",
-    summary: "Engineered backend microservices for a gym management platform, marking the pivotal bridge between software engineering and AI.",
+    summary: "Engineered backend microservices and relational database schemas for a gym management platform.",
     bulletPoints: [
-      "Contributed to a commercial gym management system by architecting normalized, efficient SQL schemas for membership, billing, and scheduling.",
-      "Engineered high-performance REST APIs using FastAPI with strict Pydantic validation and comprehensive test coverage.",
-      "Coordinated sprint tasks and defect triage using JIRA within an Agile Scrum workflow, collaborating closely with frontend engineers."
+      "Architected normalized SQL schemas and high-performance FastAPI REST endpoints with Pydantic validation.",
+      "Collaborated in an Agile Scrum environment for sprint deliverables and defect triage."
     ],
-    technologies: ["FastAPI", "SQL", "Schema Design", "JIRA", "Agile / Scrum", "REST APIs"],
+    technologies: ["FastAPI", "SQL", "Schema Design", "Agile / Scrum", "REST APIs"],
     status: "COMPLETED ORBIT",
     badgeColor: "border-cyan-500/40 text-cyan-300 bg-cyan-500/10"
   }
@@ -541,7 +537,7 @@ export const PROJECTS: Project[] = [
     planetType: "Ice World",
     glowColor: "rgba(147, 51, 234, 0.4)",
     accentColor: "#9333ea",
-    githubUrl: "https://github.com/the-ever-shining-Manal/legal-document-intelligence-rag.git",
+    githubUrl: "https://github.com/the-ever-shining-Manal/egypt-law-rag.git",
     highlights: ["Arabic NLP Tokenization", "Verifiable Legal Citations", "Dense Clause Extraction"]
   },
   {
@@ -569,25 +565,39 @@ export const PROJECTS: Project[] = [
 export const CERTIFICATIONS: Certification[] = [
   {
     title: "Build with AI",
-    issuer: "Google Cloud",
+    issuer: "Google Cloud & DEPI",
     year: "2026",
-    badge: "Selected (Top 5,000 Applicants)",
-    description: "Selected among 5,000 applicants for the Medium/Advanced track to explore enterprise AI solutions using Google Cloud infrastructure and Vertex AI tooling.",
-    keyTopics: ["Vertex AI", "Google Cloud Platform", "Enterprise LLMs", "Cloud Architecture"]
-  },
-  {
-    title: "Machine Learning Specialization",
-    issuer: "Coursera / DeepLearning.AI — Andrew Ng",
-    badge: "Foundational Mastery",
-    description: "Comprehensive multi-course specialization covering mathematical foundations, algorithmic formulation, and production machine learning system design.",
-    keyTopics: ["Supervised Learning", "Unsupervised Learning", "Model Evaluation & Metrics", "Regularization", "ML System Design"]
+    badge: "Selected (Top 5,000)",
+    description: "Selected for the advanced track to explore enterprise AI solutions using Google Cloud infrastructure and Vertex AI tooling.",
+    keyTopics: ["Vertex AI", "Google Cloud Platform", "Enterprise LLMs"],
+    credentialUrl: "https://drive.google.com/file/d/14yn-qTILEm4dAHCQ1m_bIPOX73pMGIIb/view"
   },
   {
     title: "Deep Learning Institute",
     issuer: "NVIDIA",
+    year: "2025",
     badge: "GPU Accelerated Computing",
-    description: "Hands-on industrial training in neural network acceleration and deep learning development using NVIDIA GPU-accelerated frameworks and enterprise workflows.",
-    keyTopics: ["GPU Computing", "CUDA Architecture", "Neural Network Optimization", "TensorRT"]
+    description: "Industrial certification in neural network acceleration and deep learning development using NVIDIA GPU frameworks.",
+    keyTopics: ["GPU Computing", "CUDA Architecture", "Neural Acceleration"],
+    credentialUrl: "https://learn.nvidia.com/certificates?id=WWX_NwcvRH2_lb7DirgkRA&utm_source"
+  },
+  {
+    title: "Machine Learning Summer Training",
+    issuer: "National Telecommunication Institute (NTI)",
+    year: "2025",
+    badge: "120-Hour Enterprise Practicum",
+    description: "Intensive 120-hour practical training in machine learning architectures, Scikit-learn pipelines, and predictive algorithms.",
+    keyTopics: ["Scikit-learn", "Supervised Learning", "Feature Pipelines"],
+    credentialUrl: "https://drive.google.com/drive/folders/1SnzuKpD2AoyZ9ahW7k9hLfBfsmoi7Ijr"
+  },
+  {
+    title: "AI & Machine Learning Diploma",
+    issuer: "ROUTE Academy",
+    year: "2025–2026",
+    badge: "7-Month Engineering Diploma",
+    description: "Comprehensive 7-month engineering diploma covering supervised & unsupervised learning, deep neural networks, and model deployment.",
+    keyTopics: ["Machine Learning", "Deep Neural Networks", "Model Optimization"],
+    credentialUrl: "https://drive.google.com/drive/folders/1pEm9za3AlTdBKXuN-9xgPg2gOlyX5LKi"
   }
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HOW_I_BUILD_STAGES } from '../../data/portfolioData';
-import { Headphones, Compass, Cpu, Orbit, CheckCircle2 } from 'lucide-react';
+import { Headphones, Compass, Cpu, Orbit } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 const STEP_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -12,7 +12,7 @@ const STEP_ICONS: Record<string, React.ComponentType<{ className?: string }>> = 
 
 export const HowIWorkSection: React.FC = () => {
   return (
-    <section id="how-i-build" className="relative py-24 sm:py-32 overflow-hidden border-t border-purple-500/15">
+    <section id="how-i-build" className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background celestial glow */}
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full filter blur-[140px] opacity-15 pointer-events-none"
@@ -22,14 +22,11 @@ export const HowIWorkSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight">
             How I{' '}
             <span className="text-cosmic-gradient">Build.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
-            A four-stage orbital cycle that turns complex, ambiguous challenges into reliable, human-centric AI systems.
-          </p>
         </div>
 
         {/* 4 Connected Orbital Stages */}
@@ -64,19 +61,9 @@ export const HowIWorkSection: React.FC = () => {
                     {stage.tagline}
                   </p>
 
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-sm text-slate-300 leading-relaxed">
                     {stage.description}
                   </p>
-                </div>
-
-                {/* Sub-steps */}
-                <div className="pt-4 border-t border-white/10 space-y-1.5">
-                  {stage.details.map((d, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                      <span>{d}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             );

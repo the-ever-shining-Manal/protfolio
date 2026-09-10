@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
-import { Linkedin, Github, Mail, Phone, Copy, Check } from 'lucide-react';
+import { Linkedin, Github, Mail, MessageCircle, Copy, Check } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 export const ContactSection: React.FC = () => {
@@ -14,7 +14,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-28 sm:py-36 overflow-hidden border-t border-purple-500/20">
+    <section id="contact" className="relative py-28 sm:py-36 overflow-hidden">
       {/* Deep space horizon glow */}
       <div 
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[500px] rounded-t-full filter blur-[140px] opacity-20 pointer-events-none"
@@ -27,15 +27,10 @@ export const ContactSection: React.FC = () => {
         
 
         {/* Large Headline */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display text-white tracking-tight mb-6 max-w-4xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display text-white tracking-tight mb-12 max-w-4xl mx-auto">
           Let’s build something{' '}
           <span className="text-cosmic-gradient block sm:inline">from the future.</span>
         </h2>
-
-        {/* Supporting Text */}
-        <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-14 leading-relaxed">
-          Have an idea, a problem worth solving, or just want to talk AI? Let’s connect.
-        </p>
 
         {/* Four Elegant Communication Portals */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto mb-16">
@@ -114,20 +109,29 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Phone Portal */}
-          <div className="cosmic-panel rounded-2xl p-6 border-purple-500/25 hover:border-pink-500/50 transition-all duration-300 flex flex-col items-center justify-between text-center group hover:-translate-y-1 shadow-sm hover:shadow-cosmic-md relative">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all mb-4">
-              <Phone className="w-6 h-6" />
-            </div>
+          {/* WhatsApp & Phone Portal */}
+          <div className="cosmic-panel rounded-2xl p-6 border-purple-500/25 hover:border-emerald-500/50 transition-all duration-300 flex flex-col items-center justify-between text-center group hover:-translate-y-1 shadow-sm hover:shadow-cosmic-md relative">
+            <a
+              href="https://wa.me/201275457696"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => cosmicAudio.playChirp(900, 0.05)}
+              className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all mb-4"
+              title="Chat with Manal on WhatsApp"
+            >
+              <MessageCircle className="w-6 h-6" />
+            </a>
             <div className="w-full">
-              <span className="telemetry-tag text-purple-300 block mb-1">DIRECT AUDIO LINE</span>
-              <h3 className="font-display font-bold text-white text-lg mb-1">Phone</h3>
+              <span className="telemetry-tag text-purple-300 block mb-1">WHATSAPP & PHONE</span>
+              <h3 className="font-display font-bold text-white text-lg mb-1">WhatsApp</h3>
               <a
-                href={`tel:${PERSONAL_INFO.phone}`}
-                className="text-xs font-mono text-slate-400 group-hover:text-emerald-300 transition-colors block mb-2"
+                href="https://wa.me/201275457696"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors block mb-2 font-medium"
                 onClick={() => cosmicAudio.playChirp(900, 0.05)}
               >
-                {PERSONAL_INFO.phone}
+                +20 1275457696 →
               </a>
               <button
                 onClick={() => copyToClipboard(PERSONAL_INFO.phone, 'phone')}

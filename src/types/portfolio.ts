@@ -55,6 +55,7 @@ export interface Certification {
   badge: string;
   description: string;
   keyTopics: string[];
+  credentialUrl?: string;
 }
 
 export interface StoryWaypoint {

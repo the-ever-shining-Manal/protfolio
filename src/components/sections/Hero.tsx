@@ -21,15 +21,15 @@ export const Hero: React.FC = () => {
 
             {/* Large Headline */}
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl xl:text-[4.25rem] font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-              I’m building the future,{' '}
-              <span className="text-cosmic-gradient block mt-1">
-                one intelligent system at a time.
+              Hello, I am{' '}
+              <span className="text-cosmic-gradient block sm:inline">
+                Manal.
               </span>
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed font-normal">
-              AI Engineering student turning curiosity, creativity, and engineering into practical AI solutions.
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-2xl mb-10 leading-relaxed font-normal">
+              I’m building the future, one intelligent system at a time.
             </p>
 
             {/* Primary & Secondary CTA Buttons */}
@@ -90,9 +90,6 @@ export const Hero: React.FC = () => {
 
         </div>
       </div>
-
-      {/* Subtle bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-space-950 to-transparent pointer-events-none" />
     </section>
   );
 };

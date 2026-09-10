@@ -1,11 +1,11 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
-import { GraduationCap, Calendar, CheckCircle2, BookOpen } from 'lucide-react';
+import { GraduationCap, Calendar } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 export const EducationSection: React.FC = () => {
   return (
-    <section id="education" className="relative py-20 sm:py-28 overflow-hidden border-t border-purple-500/15">
+    <section id="education" className="relative py-20 sm:py-28 overflow-hidden">
       {/* Background glow flares */}
       <div 
         className="absolute top-1/2 right-10 w-[450px] h-[450px] rounded-full filter blur-[140px] opacity-15 pointer-events-none"
@@ -18,15 +18,12 @@ export const EducationSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Clean Section Heading without small pill header */}
+        {/* Clean Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight">
             Academic{' '}
             <span className="text-cosmic-gradient">Education.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
-            Rigorous engineering training in artificial intelligence, neural networks, and mathematical computing at Tanta University.
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -41,7 +38,7 @@ export const EducationSection: React.FC = () => {
               style={{ background: '#ec4899' }}
             />
 
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 mb-8 border-b border-white/10">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-600 p-[1px] shadow-cosmic-sm shrink-0">
                   <div className="w-full h-full bg-space-950 rounded-2xl flex items-center justify-center text-pink-400">
@@ -59,53 +56,31 @@ export const EducationSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* GPA & Timeline Badges */}
+              {/* GPA & Timeline Badges - Perfectly Symmetrical Rectangles */}
               <div className="flex flex-wrap items-center gap-4">
-                <div className="p-4 rounded-2xl bg-space-900/90 border border-pink-500/40 text-center shadow-cosmic-sm min-w-[130px]">
-                  <span className="text-[10px] font-mono text-pink-400 block uppercase">CUMULATIVE GPA</span>
+                <div className="w-48 sm:w-52 h-[124px] p-4 rounded-2xl bg-space-900/90 border border-pink-500/40 text-center shadow-cosmic-sm flex flex-col justify-between items-center">
+                  <span className="text-[10px] font-mono text-pink-400 block uppercase tracking-wider">
+                    CUMULATIVE GPA
+                  </span>
                   <span className="text-2xl sm:text-3xl font-mono font-black text-white">
                     {PERSONAL_INFO.gpa}
                   </span>
-                  <span className="text-[9px] font-mono text-slate-400 block">/ 4.0 SCALE</span>
+                  <span className="text-[10px] font-mono text-slate-400 block">
+                    / 4.0 SCALE
+                  </span>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-space-900/90 border border-purple-500/30 text-center min-w-[140px]">
-                  <span className="text-[10px] font-mono text-purple-300 block uppercase flex items-center justify-center gap-1">
-                    <Calendar className="w-3 h-3 text-pink-400" />
+                <div className="w-48 sm:w-52 h-[124px] p-4 rounded-2xl bg-space-900/90 border border-purple-500/30 text-center shadow-cosmic-sm flex flex-col justify-between items-center">
+                  <span className="text-[10px] font-mono text-purple-300 block uppercase tracking-wider flex items-center justify-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-pink-400" />
                     <span>TIMELINE</span>
                   </span>
-                  <span className="text-base font-mono font-bold text-white block mt-1">
+                  <span className="text-2xl sm:text-3xl font-mono font-black text-white">
                     2022 – 2027
                   </span>
-                  <span className="text-[9px] font-mono text-emerald-400 block font-semibold">
+                  <span className="text-[10px] font-mono text-emerald-400 block font-semibold">
                     Expected Graduation
                   </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Curriculum Focus Areas */}
-            <div>
-              <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-pink-400" />
-                CORE SPECIALIZATION AREAS
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="flex items-start gap-2.5 text-sm text-slate-300 p-2.5 rounded-xl bg-space-900/60 border border-white/5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span>Machine Learning, Deep Neural Networks & Optimization</span>
-                </div>
-                <div className="flex items-start gap-2.5 text-sm text-slate-300 p-2.5 rounded-xl bg-space-900/60 border border-white/5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span>Natural Language Processing (NLP), Embeddings & Arabic NLP</span>
-                </div>
-                <div className="flex items-start gap-2.5 text-sm text-slate-300 p-2.5 rounded-xl bg-space-900/60 border border-white/5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span>Generative AI, Large Language Models & Multimodal RAG Systems</span>
-                </div>
-                <div className="flex items-start gap-2.5 text-sm text-slate-300 p-2.5 rounded-xl bg-space-900/60 border border-white/5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span>Agentic AI, Autonomous Decision Workflows & Multi-Agent Frameworks</span>
                 </div>
               </div>
             </div>
