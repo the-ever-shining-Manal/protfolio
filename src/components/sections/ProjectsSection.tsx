@@ -85,23 +85,14 @@ export const ProjectsSection: React.FC = () => {
                     background: `linear-gradient(135deg, rgba(10, 7, 29, 0.9) 0%, ${proj.glowColor} 200%)`
                   }}
                 >
-                  <div className="flex items-center gap-3">
-                    {/* Abstract Mini Planet Sphere */}
-                    <div 
-                      className="w-10 h-10 rounded-full flex items-center justify-center border border-white/20 shadow-inner relative overflow-hidden"
-                      style={{
-                        background: `radial-gradient(circle at 30% 30%, #ffffff 0%, ${proj.accentColor} 60%, #030208 100%)`
-                      }}
-                    >
-                      {/* Orbital ring */}
-                      <div className="absolute inset-0 border border-white/40 rounded-full transform rotate-45 scale-125 pointer-events-none" />
-                    </div>
-
-                    <div>
-                      <span className="telemetry-tag text-purple-300 font-bold block">
-                        {proj.number}
-                      </span>
-                    </div>
+                  <div className="flex items-center gap-2.5">
+                    <span 
+                      className="w-2.5 h-2.5 rounded-full"
+                      style={{ backgroundColor: proj.accentColor, boxShadow: `0 0 10px ${proj.accentColor}` }}
+                    />
+                    <span className="telemetry-tag text-purple-300 font-bold">
+                      {proj.number}
+                    </span>
                   </div>
 
                   <div className="text-right">
