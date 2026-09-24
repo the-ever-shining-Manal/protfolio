@@ -470,7 +470,14 @@ export const PROJECTS: Project[] = [
     glowColor: "rgba(249, 115, 22, 0.4)",
     accentColor: "#f97316",
     githubUrl: "https://github.com/the-ever-shining-Manal/New-York-City-Airbnb-Open-dataset-preprocessing.git",
-    highlights: ["Borough Spatial Heatmaps", "Outlier Purification", "Pricing Volatility Analysis"]
+    highlights: ["Borough Spatial Heatmaps", "Outlier Purification", "Pricing Volatility Analysis"],
+    images: [
+      "/nyc-airbnb-1.png",
+      "/nyc-airbnb-2.png",
+      "/nyc-airbnb-3.png",
+      "/nyc-airbnb-4.png",
+      "/nyc-airbnb-5.png"
+    ]
   },
   {
     id: "medical-cost",
