@@ -511,7 +511,8 @@ export const PROJECTS: Project[] = [
     glowColor: "rgba(147, 51, 234, 0.4)",
     accentColor: "#9333ea",
     githubUrl: "https://github.com/the-ever-shining-Manal/egypt-law-rag.git",
-    highlights: ["Arabic NLP Tokenization", "Verifiable Legal Citations", "Dense Clause Extraction"]
+    highlights: ["Arabic NLP Tokenization", "Verifiable Legal Citations", "Dense Clause Extraction"],
+    images: ["/legal-doc-1.png"]
   },
   {
     id: "viral-reel",

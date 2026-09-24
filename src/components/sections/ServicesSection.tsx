@@ -1,6 +1,6 @@
 import React from 'react';
 import { SERVICES } from '../../data/portfolioData';
-import { Cpu, Sparkles, Eye, Layers, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Cpu, Sparkles, Eye, Layers, CheckCircle2 } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 const SERVICE_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -27,10 +27,6 @@ export const ServicesSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-300 text-xs font-mono mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-            <span>SOLUTIONS & EXPERTISE</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight mb-4">
             Here’s what I can actually{' '}
@@ -96,7 +92,7 @@ export const ServicesSection: React.FC = () => {
                   </p>
 
                   {/* Capabilities List */}
-                  <div className="space-y-2.5 pt-4 border-t border-white/10 mb-6">
+                  <div className="space-y-2.5 pt-4 border-t border-white/10">
                     {srv.capabilities.map((cap, cIdx) => (
                       <div key={cIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 leading-normal">
                         <CheckCircle2 
@@ -109,44 +105,9 @@ export const ServicesSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Footer Action */}
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <a
-                    href="#contact"
-                    onClick={() => cosmicAudio.playChirp(880, 0.05)}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-pink-400 group-hover:text-pink-300 font-semibold group/link"
-                  >
-                    <span>REQUEST THIS CAPABILITY</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
-                  </a>
-                </div>
-
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom CTA Banner */}
-        <div className="mt-14 max-w-4xl mx-auto text-center">
-          <div className="cosmic-panel rounded-2xl p-6 sm:p-8 border-pink-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-cosmic-sm">
-            <div className="text-left">
-              <h4 className="text-lg sm:text-xl font-bold font-display text-white mb-1">
-                Have a custom AI idea or problem to solve?
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-300">
-                Let’s talk architecture, feasibility, and create a working prototype.
-              </p>
-            </div>
-
-            <a
-              href="#contact"
-              onClick={() => cosmicAudio.playChirp(900, 0.05)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 text-white font-medium text-sm transition-all duration-300 shadow-cosmic-md hover:shadow-cosmic-lg transform hover:-translate-y-0.5 shrink-0"
-            >
-              <span>Let’s Connect</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
         </div>
 
       </div>

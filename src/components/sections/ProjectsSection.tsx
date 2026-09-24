@@ -127,7 +127,7 @@ export const ProjectsSection: React.FC = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-space-950 via-transparent to-transparent opacity-50" />
                         <span className="absolute bottom-2 right-2 text-[9px] font-mono px-2 py-0.5 rounded-full bg-space-950/80 border border-white/20 text-purple-200 backdrop-blur-sm">
-                          📷 {proj.images.length} SCREENSHOTS
+                          📷 {proj.images.length} {proj.images.length === 1 ? 'SCREENSHOT' : 'SCREENSHOTS'}
                         </span>
                       </div>
                     )}
