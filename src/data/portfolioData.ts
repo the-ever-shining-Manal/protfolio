@@ -539,7 +539,8 @@ export const PROJECTS: Project[] = [
     glowColor: "rgba(217, 70, 239, 0.4)",
     accentColor: "#d946ef",
     githubUrl: "https://github.com/the-ever-shining-Manal/ai-multimodal-content-engine.git",
-    highlights: ["Cognitive Hook Detection", "Dynamic Aspect Re-Framing", "Synchronized Viral Subtitles"]
+    highlights: ["Cognitive Hook Detection", "Dynamic Aspect Re-Framing", "Synchronized Viral Subtitles"],
+    images: ["/viral-reel-1.png", "/viral-reel-2.png"]
   }
 ];
 
