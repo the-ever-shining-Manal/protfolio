@@ -117,6 +117,21 @@ export const ProjectsSection: React.FC = () => {
                 {/* Card Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
+                    {/* Visual Screenshot Preview if available */}
+                    {proj.images && proj.images.length > 0 && (
+                      <div className="relative w-full h-36 mb-4 rounded-xl overflow-hidden border border-purple-500/25 bg-space-950 group-hover:border-pink-500/50 transition-colors">
+                        <img
+                          src={proj.images[0]}
+                          alt={`${proj.title} preview`}
+                          className="w-full h-full object-cover object-top filter brightness-[0.95] group-hover:brightness-105 group-hover:scale-105 transition-all duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-space-950 via-transparent to-transparent opacity-50" />
+                        <span className="absolute bottom-2 right-2 text-[9px] font-mono px-2 py-0.5 rounded-full bg-space-950/80 border border-white/20 text-purple-200 backdrop-blur-sm">
+                          📷 {proj.images.length} SCREENSHOTS
+                        </span>
+                      </div>
+                    )}
+
                     <h3 className="text-xl font-bold font-display text-white group-hover:text-pink-300 transition-colors">
                       {proj.title}
                     </h3>

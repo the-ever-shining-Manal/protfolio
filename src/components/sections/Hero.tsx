@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Send } from 'lucide-react';
+import { ArrowRight, Send, FileText, Download } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 export const Hero: React.FC = () => {
@@ -32,23 +32,36 @@ export const Hero: React.FC = () => {
               I’m building the future, one intelligent system at a time.
             </p>
 
-            {/* Primary & Secondary CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            {/* Action Buttons with CV */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5">
               {/* Primary Button */}
               <a
                 href="#projects"
                 onClick={() => cosmicAudio.playChirp(880, 0.06)}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 text-white font-medium text-sm transition-all duration-300 shadow-cosmic-md hover:shadow-cosmic-lg transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 text-white font-medium text-sm transition-all duration-300 shadow-cosmic-md hover:shadow-cosmic-lg transform hover:-translate-y-0.5"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              {/* View CV Button */}
+              <a
+                href="/Manal-Anwer-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => cosmicAudio.playChirp(960, 0.06)}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-600/20 hover:from-pink-500/30 hover:to-purple-600/30 text-white font-medium text-sm border border-pink-500/40 hover:border-pink-400 transition-all duration-300 backdrop-blur-md shadow-cosmic-sm hover:shadow-cosmic-md transform hover:-translate-y-0.5"
+              >
+                <FileText className="w-4 h-4 text-pink-400" />
+                <span>View CV</span>
+                <Download className="w-3.5 h-3.5 text-pink-300/80" />
               </a>
 
               {/* Secondary Button */}
               <a
                 href="#contact"
                 onClick={() => cosmicAudio.playChirp(700, 0.05)}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-space-900/80 hover:bg-space-800 text-slate-200 hover:text-white font-medium text-sm border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 backdrop-blur-md"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-space-900/80 hover:bg-space-800 text-slate-200 hover:text-white font-medium text-sm border border-purple-500/30 hover:border-pink-500/50 transition-all duration-300 backdrop-blur-md"
               >
                 <Send className="w-4 h-4 text-pink-400" />
                 <span>Let’s Connect</span>
@@ -77,7 +90,7 @@ export const Hero: React.FC = () => {
                 {/* Image Inner Wrapper */}
                 <div className="relative w-full h-[400px] sm:h-[460px] md:h-[510px] rounded-[22px] overflow-hidden bg-space-950">
                   <img
-                    src="/manal-anwer.jpg"
+                    src="/manal-anwer.png"
                     alt="Manal Anwer — Artificial Intelligence Engineer"
                     className="w-full h-full object-cover object-center filter brightness-[1.02] contrast-[1.03] transition-all duration-700 group-hover:scale-105"
                   />

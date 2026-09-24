@@ -233,9 +233,6 @@ export const ConstellationCanvas: React.FC<ConstellationCanvasProps> = ({ select
                 <h4 className="text-2xl font-bold font-display text-white tracking-wide">
                   {activeSkill.name}
                 </h4>
-                <span className="text-xs font-mono text-emerald-400 font-medium">
-                  {activeSkill.level}
-                </span>
               </div>
               <p className="text-xs font-mono text-slate-400 mt-1">
                 SYSTEM NODE ID: #{activeSkill.id.toUpperCase()}

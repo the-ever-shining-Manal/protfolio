@@ -9,7 +9,7 @@ export interface SkillNode {
   id: string;
   name: string;
   category: SkillCategory;
-  level: 'Expert' | 'Advanced' | 'Intermediate';
+  level?: string;
   description: string;
   relatedProjects: string[];
   x: number; // 0 to 100 for constellation positioning
@@ -33,6 +33,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   highlights: string[];
+  images?: string[];
 }
 
 export interface MissionExperience {

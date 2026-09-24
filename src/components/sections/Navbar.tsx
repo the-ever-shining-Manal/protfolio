@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Volume2, VolumeX, Menu, X } from 'lucide-react';
+import { Volume2, VolumeX, Menu, X, FileText } from 'lucide-react';
 import { cosmicAudio } from '../../utils/audio';
 
 const NAV_ITEMS = [
@@ -44,8 +44,21 @@ export const Navbar: React.FC = () => {
           ))}
         </nav>
 
-        {/* Right side controls: Audio Toggle & Mobile Menu Button */}
+        {/* Right side controls: CV Link, Audio Toggle & Mobile Menu Button */}
         <div className="flex items-center gap-2 ml-auto md:ml-0">
+          {/* CV Button */}
+          <a
+            href="/Manal-Anwer-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => cosmicAudio.playChirp(920, 0.04)}
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-900/60 to-pink-900/50 hover:from-purple-800/80 hover:to-pink-800/70 border border-pink-500/35 text-pink-200 hover:text-white text-xs font-mono transition-all backdrop-blur-xl shadow-cosmic-xs"
+            title="Download Manal Anwer's CV"
+          >
+            <FileText className="w-3.5 h-3.5 text-pink-400" />
+            <span>CV</span>
+          </a>
+
           {/* Sound Toggle */}
           <button
             onClick={toggleSound}
@@ -96,6 +109,16 @@ export const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href="/Manal-Anwer-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleNavClick}
+            className="px-4 py-2.5 mt-1 rounded-xl text-sm font-medium text-pink-300 hover:text-white bg-pink-500/10 border border-pink-500/30 flex items-center justify-between transition-colors"
+          >
+            <span>View / Download CV</span>
+            <FileText className="w-4 h-4" />
+          </a>
         </div>
       )}
     </header>

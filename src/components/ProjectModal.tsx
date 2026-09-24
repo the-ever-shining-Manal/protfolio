@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Project } from '../types/portfolio';
-import { X, ExternalLink, Github, CheckCircle2, Globe, Cpu } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2, Globe, Cpu, Image as ImageIcon } from 'lucide-react';
 import { cosmicAudio } from '../utils/audio';
 
 interface ProjectModalProps {
@@ -84,6 +84,38 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             {project.fullOverview}
           </p>
         </div>
+
+        {/* Project Screenshots Gallery */}
+        {project.images && project.images.length > 0 && (
+          <div className="mb-6">
+            <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2">
+              <ImageIcon className="w-4 h-4 text-purple-400" />
+              SYSTEM INTERFACE & SCREENSHOTS
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {project.images.map((imgSrc, idx) => (
+                <div
+                  key={idx}
+                  className="group relative rounded-xl overflow-hidden border border-purple-500/25 bg-space-950 shadow-md"
+                >
+                  <img
+                    src={imgSrc}
+                    alt={`${project.title} screenshot ${idx + 1}`}
+                    className="w-full h-44 sm:h-48 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <a
+                    href={imgSrc}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 bg-space-950/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-1.5 text-xs font-mono text-white transition-opacity duration-200 backdrop-blur-[2px]"
+                  >
+                    <span>View Full Size ↗</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Key Features */}
         <div className="mb-6">

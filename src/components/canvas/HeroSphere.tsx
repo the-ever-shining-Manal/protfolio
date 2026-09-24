@@ -129,9 +129,6 @@ export const HeroSphere: React.FC = () => {
           <span className="text-[10px] font-mono tracking-widest text-pink-200/90 font-semibold uppercase">
             AI CORE
           </span>
-          <span className="text-[8px] font-mono text-purple-300/70 tracking-tight">
-            ORBIT-ACTIVE
-          </span>
         </div>
       </div>
 
