@@ -198,12 +198,6 @@ export const ConstellationCanvas: React.FC<ConstellationCanvasProps> = ({ select
             SECTOR: <strong className="text-purple-300">{selectedCategory.toUpperCase()}</strong>
           </span>
         </div>
-
-        <div className="absolute bottom-4 right-4 pointer-events-none text-right">
-          <span className="text-[10px] font-mono text-slate-500">
-            HOVER STAR TO DECODE // CLICK TO LOCK
-          </span>
-        </div>
       </div>
 
       {/* Holographic Star Dossier Panel */}

@@ -101,9 +101,6 @@ export const ProjectsSection: React.FC = () => {
                       <span className="telemetry-tag text-purple-300 font-bold block">
                         {proj.number}
                       </span>
-                      <span className="text-[10px] font-mono text-slate-400">
-                        {proj.planetType.toUpperCase()} CLASS
-                      </span>
                     </div>
                   </div>
 

@@ -45,7 +45,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               style={{ backgroundColor: project.accentColor }}
             />
             <span className="telemetry-tag text-purple-300 font-mono text-xs">
-              {project.number} // PLANET CLASSIFICATION: {project.planetType.toUpperCase()}
+              {project.number}
             </span>
           </div>
 
