@@ -1,15 +1,15 @@
-import { Project, MissionExperience, SkillNode, Certification, StoryWaypoint, HowIWorkStage } from '../types/portfolio';
+import { Project, MissionExperience, SkillNode, Certification, StoryWaypoint, ServiceItem } from '../types/portfolio';
 
 export const PERSONAL_INFO = {
   name: "MANAL ANWER",
   title: "Artificial Intelligence Engineer | ML & Generative AI",
   shortPositioning: "Building intelligent systems that make human life easier.",
-  university: "Tanta University — Faculty of Engineering",
+  university: "Faculty of Engineering",
   degree: "B.Sc. in Artificial Intelligence",
   period: "Aug 2022 – Jun 2027 (Expected)",
   gpa: "3.613 / 4.0",
-  location: "Egypt",
-  coordinates: "30.7865° N, 31.0004° E",
+  location: "Global / Remote",
+  coordinates: "ORBIT-MA-01",
   stationCode: "ORBIT-MA-01",
   email: "manal.anwer.elsaied@gmail.com",
   phone: "+20 1275457696",
@@ -352,9 +352,8 @@ export const MISSIONS: MissionExperience[] = [
   {
     missionNumber: "MISSION 01",
     role: "Agentic AI & Generative AI System Developer",
-    organization: "DEPI (Digital Egypt Pioneers Initiative)",
+    organization: "DEPI",
     period: "Jul 2026 – Present",
-    location: "Egypt",
     summary: "Engineering next-generation agentic workflows, memory systems, and resilient LLM integrations.",
     bulletPoints: [
       "Building autonomous multi-agent workflows with cognitive memory, RAG, and custom tool calling.",
@@ -369,7 +368,6 @@ export const MISSIONS: MissionExperience[] = [
     role: "AI & Machine Learning Trainee",
     organization: "ROUTE Academy",
     period: "Jul 2025 – Jan 2026 (7 Months)",
-    location: "Egypt",
     summary: "Intensive 7-month AI & ML diploma mastering supervised, unsupervised, and deep predictive pipelines.",
     bulletPoints: [
       "Engineered, optimized, and benchmarked robust regression, classification, and neural network models.",
@@ -384,7 +382,6 @@ export const MISSIONS: MissionExperience[] = [
     role: "Machine Learning Intern",
     organization: "National Telecommunication Institute (NTI)",
     period: "Jul 2025 – Aug 2025",
-    location: "Egypt",
     summary: "120-hour intensive ML practicum focused on enterprise data pipelines and Scikit-learn architectures.",
     bulletPoints: [
       "Constructed modular Scikit-learn preprocessing and modeling pipelines with cross-validation.",
@@ -399,7 +396,6 @@ export const MISSIONS: MissionExperience[] = [
     role: "Software Engineering Intern",
     organization: "DreamSoft",
     period: "Aug 2024 – Sep 2024",
-    location: "Egypt",
     summary: "Engineered backend microservices and relational database schemas for a gym management platform.",
     bulletPoints: [
       "Architected normalized SQL schemas and high-performance FastAPI REST endpoints with Pydantic validation.",
@@ -432,7 +428,8 @@ export const PROJECTS: Project[] = [
     accentColor: "#ec4899",
     githubUrl: "https://github.com/MedInfant-RAG/MedSeek-Infant-Health-Assistant.git",
     liveUrl: "#",
-    highlights: ["Multimodal Vision + Audio", "Clinical Hallucination Guardrails", "Bilingual Support"]
+    highlights: ["Multimodal Vision + Audio", "Clinical Hallucination Guardrails", "Bilingual Support"],
+    images: ["/medseek-1.png", "/medseek-2.png"]
   },
   {
     id: "readnext",
@@ -493,7 +490,8 @@ export const PROJECTS: Project[] = [
     glowColor: "rgba(244, 63, 94, 0.4)",
     accentColor: "#f43f5e",
     githubUrl: "https://github.com/the-ever-shining-Manal/medical-cost-risk-predictor.git",
-    highlights: ["Actuarial Risk Modeling", "Sub-Second Cloud Inference", "AWS Deployment"]
+    highlights: ["Actuarial Risk Modeling", "Sub-Second Cloud Inference", "AWS Deployment"],
+    images: ["/medical-cost-1.png", "/medical-cost-2.png"]
   },
   {
     id: "legal-doc-intel",
@@ -604,37 +602,53 @@ export const LEADERSHIP_ATTRIBUTES = [
   }
 ];
 
-export const HOW_I_BUILD_STAGES: HowIWorkStage[] = [
+export const SERVICES: ServiceItem[] = [
   {
-    step: "01",
-    name: "Listen",
-    tagline: "Understand the people and the real problem.",
-    description: "Every great system begins with empathy and observation. Before writing a line of code or training a model, I immerse myself in the stakeholder's reality: What is the true friction point? What would genuinely make their life easier?",
-    details: ["User interviews & workflow analysis", "Problem decomposition", "Ethical impact & feasibility assessment"],
-    icon: "Headphones"
+    number: "01",
+    title: "Machine Learning",
+    description: "Build predictive models and intelligent data-driven solutions.",
+    icon: "Cpu",
+    color: "#f97316",
+    capabilities: [
+      "Predictive analytics & regression/classification pipelines",
+      "Feature engineering, outlier purification & data preprocessing",
+      "Model evaluation, cross-validation & hyperparameter optimization"
+    ]
   },
   {
-    step: "02",
-    name: "Plan",
-    tagline: "Break the problem down and create a clear roadmap.",
-    description: "Transforming ambiguous challenges into structured engineering blueprints. Defining database schemas, evaluating algorithmic tradeoffs, designing RAG pipeline boundaries, and setting verifiable performance benchmarks.",
-    details: ["Architectural diagramming", "Data pipeline & metric definition", "Milestone sprint mapping"],
-    icon: "Compass"
+    number: "02",
+    title: "Generative AI & RAG",
+    description: "Build LLM applications, AI assistants, and knowledge-based systems.",
+    icon: "Sparkles",
+    color: "#ec4899",
+    capabilities: [
+      "Dense/sparse hybrid vector search (FAISS, BGE-M3, BM25)",
+      "Strict hallucination guardrails & clinical/legal citation verification",
+      "Autonomous tool-calling & cognitive conversational assistants"
+    ]
   },
   {
-    step: "03",
-    name: "Build",
-    tagline: "Turn ideas into practical AI systems.",
-    description: "Where curiosity meets engineering rigor. Writing modular, type-safe Python and modern microservices, training neural models, configuring vector indices, and creating responsive user interfaces that feel effortless.",
-    details: ["Clean, reproducible codebases", "Robust validation & hallucination controls", "Containerized microservice deployment"],
-    icon: "Cpu"
+    number: "03",
+    title: "Computer Vision",
+    description: "Build AI systems that understand and process visual information.",
+    icon: "Eye",
+    color: "#06b6d4",
+    capabilities: [
+      "Multimodal vision-language ingestion (GPT-4o / GPT-4o-mini vision)",
+      "Image classification & visual feature representation",
+      "Visual symptom, object, and document analysis"
+    ]
   },
   {
-    step: "04",
-    name: "Improve",
-    tagline: "Test, evaluate, learn, and keep improving.",
-    description: "An AI system is never static. Continually monitoring inference latency, evaluating edge-case failure modes, gathering real feedback, and iterating on architectures to push boundaries further.",
-    details: ["Automated evaluation & regression testing", "Feedback loop integration", "Model re-calibration & scaling"],
-    icon: "Orbit"
+    number: "04",
+    title: "AI Application Development",
+    description: "Turn AI models into usable applications with APIs, interfaces, and deployment.",
+    icon: "Layers",
+    color: "#a855f7",
+    capabilities: [
+      "High-performance FastAPI asynchronous REST microservices",
+      "Interactive Streamlit & modern frontend client applications",
+      "Docker containerization & cloud deployment (AWS EC2 / S3)"
+    ]
   }
 ];

@@ -58,7 +58,7 @@ export const LeadershipSection: React.FC = () => {
                 Head of Arts Committee
               </h3>
               <p className="text-sm font-mono text-purple-300/90 mb-6">
-                Tanta Engineering Students’ Union
+                Engineering Students’ Union
               </p>
 
               <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">

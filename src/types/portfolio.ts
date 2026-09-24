@@ -41,7 +41,7 @@ export interface MissionExperience {
   role: string;
   organization: string;
   period: string;
-  location: string;
+  location?: string;
   summary: string;
   bulletPoints: string[];
   technologies: string[];
@@ -69,11 +69,11 @@ export interface StoryWaypoint {
   iconName: string;
 }
 
-export interface HowIWorkStage {
-  step: string;
-  name: string;
-  tagline: string;
+export interface ServiceItem {
+  number: string;
+  title: string;
   description: string;
-  details: string[];
   icon: string;
+  color: string;
+  capabilities: string[];
 }

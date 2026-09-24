@@ -48,10 +48,10 @@ export const EducationSection: React.FC = () => {
 
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
-                    Tanta University
+                    Faculty of Engineering
                   </h3>
                   <p className="text-sm font-mono text-purple-200 mt-0.5">
-                    Faculty of Engineering • B.Sc. in Artificial Intelligence
+                    Bachelor of Science in Artificial Intelligence
                   </p>
                 </div>
               </div>

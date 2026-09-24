@@ -77,7 +77,7 @@ export const ExperienceTimeline: React.FC = () => {
                         {mission.role}
                       </h3>
                       <p className="text-sm font-semibold text-purple-300 mt-1 mb-3">
-                        {mission.organization} • <span className="font-normal text-slate-400">{mission.location}</span>
+                        {mission.organization}
                       </p>
 
                       {/* Summary */}

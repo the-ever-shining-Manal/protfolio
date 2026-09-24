@@ -8,7 +8,7 @@ import { SkillsConstellation } from './components/sections/SkillsConstellation';
 import { ExperienceTimeline } from './components/sections/ExperienceTimeline';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { CertificationsSection } from './components/sections/CertificationsSection';
-import { HowIWorkSection } from './components/sections/HowIWorkSection';
+import { ServicesSection } from './components/sections/ServicesSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/sections/Footer';
 
@@ -29,7 +29,7 @@ export const App: React.FC = () => {
         {/* 2. Unified About Me (Sci-Fi Origin Story + AI Engineering Profile + Core Mission) */}
         <AboutSection />
 
-        {/* 3. Academic Education (Tanta University, B.Sc. in AI, GPA 3.613 / 4.0) */}
+        {/* 3. Academic Education (Faculty of Engineering, B.Sc. in AI, GPA 3.613 / 4.0) */}
         <EducationSection />
 
         {/* 4. Top Skills & Celestial AI Core Planet + Skill Constellation underneath */}
@@ -44,8 +44,8 @@ export const App: React.FC = () => {
         {/* 7. Certifications & Advanced Programs */}
         <CertificationsSection />
 
-        {/* 8. How I Build (Methodology & Workflow) */}
-        <HowIWorkSection />
+        {/* 8. My Services (Here’s what I can actually build for you) */}
+        <ServicesSection />
 
         {/* 9. Contact / Event Horizon Destination */}
         <ContactSection />
